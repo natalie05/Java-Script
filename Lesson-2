@@ -1,0 +1,124 @@
+<!DOCTYPE html> 
+<html>
+	<head> 
+		<meta charset="UTF-8"> 
+		<title>Домашнее задание №2</title> 
+		<script>
+			// 1.      
+			let a = 1, b = 1, c, d;
+			c = ++a; alert(c); // 2  Сначала выполняется присваивание, потом вывод
+			d = b++; alert(d); // 1  Сначала выполняется вывод, потом присваивание
+			c = (2+ ++a); alert(c); // 5 переменную а увеличили на единицу в п.2, она =2,увеличиваем ее на 1 и прибавляем 2
+			d = (2+ b++); alert(d); // 4 переменную b увеличили на единицу в п.2, она =2, прибавляем 2, выводим, затем b увеличиваем на 1
+			alert(a); // 3 два раза увеличивали на 1
+			alert(b); // 3 два раза увеличивали на 1
+     
+			//2.
+			//let a = 2;
+			let x = 1 + (a *= 2); // = 5 Умножается переменная а на 2 и ей присваивается результат 4, затем 4+1
+			alert(x);
+     
+			//3.
+			function Operation(a, b){
+			//  let a = 5, b = -1;
+			  if (a*b < 0) { //разных знаков
+					alert(a+b);
+					return a+b;}
+			 else if (a < 0) { //одного знака, отрицательные
+				alert(a-b);
+				return a-b;}
+			 else {  //одного знака, положительные
+				alert(a*b);
+				return a*b; 
+				}
+			}
+      
+			 //4.
+			// let a = 10; 
+			 switch(a) {
+			 case 1:
+			  alert(1);
+			 case 2:
+			  alert(2);     
+			 case 3:
+			  alert(3);  
+			 case 4:
+			  alert(4);      
+			 case 5:
+			  alert(5);      
+			 case 6:
+			  alert(6);       
+			 case 7:
+			  alert(7);     
+			 case 8:
+			  alert(8);   
+			 case 9:  
+			  alert(9);   
+			 case 10:  
+			  alert(10);        
+			 case 11:  
+			  alert(11);         
+			  case 12:  
+			 alert(12);      
+			  case 13:  
+			 alert(13);       
+			  case 14: 
+			alert(14);       
+			  case 15:     
+			 alert(15);       
+			  };
+      
+			 //5.     
+			  function multiply(x, y)
+				{
+				  return x*y;
+				}
+			  function divide(x, y)
+				{
+				  return x/y;
+				}
+			 function add(x, y)
+				{
+				  return x-y;
+				}
+			 function deduct(x, y)
+				{
+				  return x-y;
+				}        
+				
+			  //6.      
+			  function mathOperation(arg1, arg2, operation)
+				{	
+				let f;
+				switch (operation) {
+				  case "multiply":
+				   f = multiply(arg1, arg2);
+					break;
+				   case "divide":
+					f = divide(arg1, arg2);
+					break;
+				   case "add":
+					 f = add(arg1, arg2);
+					 break;
+				   default:
+					 f = deduct(arg1, arg2);
+				  }
+				  return f;
+				}      
+			  
+				alert(mathOperation(5, 6,  "multiply"));  
+				
+			 //7.	
+			 alert(null<0); 
+			 
+			 //8.
+			  function power(val, pow){
+				return pow == 1 ? val : val * power(val, --pow);
+				}	
+			alert(power(2, 4));    
+		</script> 
+	</head>
+	<body> 
+	
+	</body>
+</html>
